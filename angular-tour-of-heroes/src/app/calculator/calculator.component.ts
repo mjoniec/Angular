@@ -9,7 +9,6 @@ export class CalculatorComponent implements OnInit {
 
   counter = 0;
   res = "";
-  btn0
 
   constructor() { }
 
