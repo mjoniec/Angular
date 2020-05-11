@@ -1,3 +1,15 @@
 <p>calculator</p>
-<!-- <button id="btn" onclick="test()">0</button> -->
-<button id="btn" (click)="increment()">{{counter}}</button>
+<!-- <button id="btn" (click)="test()">0</button> -->
+<button (click)="increment()">{{counter}}</button>
+
+<textarea id="res">{{res}}</textarea>
+<div id="btns" class="buttonContainer">
+    <button class="buttonClass" (click)="btn0_A()">0</button>
+    <button class="buttonClass" (click)="btn1_A()">1</button>          
+    <button class="buttonClass" (click)="btnClr_A()">C</button>
+    <button class="buttonClass" (click)="btnEql_A()">=</button>
+    <button class="buttonClass" (click)="btnSum_A()">+</button>
+    <button class="buttonClass" (click)="btnSub_A()">-</button>
+    <button class="buttonClass" (click)="btnMul_A()">*</button>
+    <button class="buttonClass" (click)="btnDiv_A()">/</button>
+</div>
