@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-node-api',
@@ -7,14 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NodeApiComponent implements OnInit {
 
-  counter = 0;
+  counter;
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
   }
 
   increment(){
-    this.counter++;
+    this.httpClient.get('http://localhost:3000/url')
+      .subscribe(response => {
+        console.log('xx');
+        this.counter = response.toString();
+      });
   }
 }
