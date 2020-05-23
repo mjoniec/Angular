@@ -14,6 +14,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { NodeApiComponent } from './node-api/node-api.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CalculatorComponent } from './calculator/calculator.component';
     MessagesComponent,
     DashboardComponent,
     HeroSearchComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    NodeApiComponent
   ],
   imports: [
     BrowserModule,
