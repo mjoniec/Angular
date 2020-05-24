@@ -25,4 +25,11 @@ export class NodeApiComponent implements OnInit {
         this.counter = response.toString();
       });
   }
+
+  parallel(){
+    this.apiHttpService.get(this.constants.API_ENDPOINT_PARALLEL)
+      .subscribe(response => {
+        this.counter = response.toString();
+      });
+  }
 }
