@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { ApiHttpService } from '../api-http.service';
+import { Constants } from '../config/constants'
 
 @Component({
   selector: 'app-node-api',
@@ -10,15 +11,17 @@ export class NodeApiComponent implements OnInit {
 
   counter;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(
+    private constants: Constants, 
+    private apiHttpService: ApiHttpService) 
+    { }
 
   ngOnInit(): void {
   }
 
   increment(){
-    this.httpClient.get('http://localhost:3000/url')
+    this.apiHttpService.get(this.constants.API_ENDPOINT)
       .subscribe(response => {
-        console.log('xx');
         this.counter = response.toString();
       });
   }
