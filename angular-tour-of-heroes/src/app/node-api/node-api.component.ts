@@ -26,8 +26,15 @@ export class NodeApiComponent implements OnInit {
       });
   }
 
-  parallel(){
-    this.apiHttpService.get(this.constants.API_ENDPOINT_PARALLEL)
+  nodeApiAsync(){
+    this.apiHttpService.get(this.constants.API_ENDPOINT_ASYNC)
+      .subscribe(response => {
+        this.counter = response.toString();
+      });
+  }
+
+  nodeApiParallel(){
+    this.apiHttpService.get(this.constants.API_ENDPOINT_PARALLEL2)
       .subscribe(response => {
         this.counter = response.toString();
       });
